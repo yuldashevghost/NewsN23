@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .child{
+            border: 2px solid #0ab20a;
+            width: 400px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        ul{
+            list-style: none;
+        }
+        h1{
+            text-align: center;
+            color: #0ab20a;
+        }
+        .ota{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body{
+            background: #2f2f2f;
+        }
+        p{
+            color: #FFFFFF;
+            font-size: 20px;
+            font-family: 'monospace';
+        }
+        
+    </style>
+</head>
+<body>
+<h1>Contacted People</h1><br>
+    {% for c in contacts %}
+        <div class="ota">
+            <div class="child">
+            <ul>
+                <li>
+                    <p>name: {{ c.name }}</p>
+                    <p>email: {{ c.email }}</p>
+                    <p>message: {{ c.message }}</p>
+                </li> <br>
+            </ul>
+        </div>
+        </div>
+    {% endfor %}
+</body>
+</html>

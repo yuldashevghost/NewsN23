@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2 class="rek">Advertisement</h2><br>
+          {% for advertise in advertises %}
+              <div>
+              <h4>{{ advertise.brand }}</h4>
+              <h3>{{ advertise.title }}</h3>
+              <p>{{ advertise.body }}</p>
+              </div>
+          {% endfor %}
+</body>
+</html>
